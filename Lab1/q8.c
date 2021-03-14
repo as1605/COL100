@@ -9,11 +9,11 @@ void main()
   if(hr>=0 && hr<=23 && min>=0 && min<=59) 
   {
 	  int min_after_midnight=hr*60+min;
-       printf("%d",min_after_midnight);
+       printf("%d\n",min_after_midnight);
   }
   else
   {
-       printf("Invalid Input");
+       printf("Invalid Input\n");
   }
 }
 

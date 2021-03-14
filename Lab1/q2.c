@@ -11,10 +11,10 @@ void main()
 		x=x/10;
 	}
 	printf("%d\n",rev);
-	if(rev>=1000)
-		printf("Valid");
+	if(rev>=1000 && rev <=9999)
+		printf("Valid\n");
 	else
-		printf("Invalid");
+		printf("Invalid\n");
 }
 
 

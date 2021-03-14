@@ -6,7 +6,7 @@ void main()
    scanf("%f %f %f",&a,&b,&c);
    if(a==0)
    { 
-	   printf("Not a Quadratic Equation");
+	   printf("Not a Quadratic Equation\n");
    }
    else
    {
@@ -14,17 +14,17 @@ void main()
      float r=sqrt(D);
      if(D>0)
      {
-	     printf("%f %f",(-b+r)/(2*a),(-b-r)/(2*a));
+	     printf("%.3f %.3f\n",(-b-r)/(2*a),(-b+r)/(2*a));
      }
 
      else
 	     if(D==0)
 	     {
-               printf("%f",-b/(2*a));
+               printf("%.3f\n",-b/(2*a));
 	     }
 	     else
 	     {
-               printf("No Real Roots");
+               printf("No Real Roots\n");
 	     }
    }
 }

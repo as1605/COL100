@@ -6,11 +6,11 @@ void main()
 	if(n>=3)
 	{
            float Angle=(float)((n-2)*180)/n;
-	   printf("%f",Angle);
+	   printf("%f\n",Angle);
 	}
 	else
 	{
-		printf("Invalid Input");
+		printf("Invalid Input\n");
 	}
 
 }

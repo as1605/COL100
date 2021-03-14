@@ -21,11 +21,11 @@ void main()
 
        else
        {
-              printf("Invalid Input");
+              printf("Invalid Input\n");
 	      return;
        }
 
      }
-     printf("%.2f",final_bill);
+     printf("%.2f\n",final_bill);
 }
 
