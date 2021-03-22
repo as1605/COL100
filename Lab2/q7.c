@@ -1,12 +1,11 @@
 #include <stdio.h>
-void main()
-{
-  int n,i,factorial=1;
-  scanf("%d",&n);
- for(i=1;i<=n;i++)
- {
-  factorial=factorial*i;
- }
- printf("%d\n",factorial);
-}
 
+int main() {
+	int n;
+	scanf("%d",&n);
+	int f=n;
+	while (n-->1) {
+		f*=n;
+	}
+	printf("%d\n",f);
+}
