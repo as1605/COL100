@@ -1,21 +1,29 @@
 #include<stdio.h>
 int const size=100;
 int search_x(int A[],int p,int q,int x) {
-	if(p==q) {
-        if(A[p]==x)
-		return 1;
-	else 
-		return -1;
-	}
+	if(p<q) {
     int t=(p+q)/2;
     if(A[t]==x)
 	    return 1;
     else {
-      if(x<A[t])
-	      return search_x(A,p,t-1,x);
-      else
-	      return search_x(A,t+1,q,x);
-    }
+      if(x<A[t]){
+	      int B[size];
+	      for(int i=0;i<t-p;i++) {
+	         B[i]=A[i+p];
+	      }
+	      return search_x(B,0,t-p-1,x);
+      }
+      else {
+	      int B[size];
+	      for(int i=0;i<q-t;i++) {
+	         B[i]=A[i+t+1];
+	      }
+	      return search_x(B,0,q-t-1,x);
+        }
+      }
+  }
+	else
+		return -1;
 }
 int main() {
    int n;
