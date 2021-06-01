@@ -11,13 +11,17 @@ int find_min(int A[],int p,int q) {
    else
 	   return ind2;
 }
+void read(int A[], int n) {
+	if (n) {
+		scanf("%d",A);
+		read(A+1,n-1);
+	}
+}
 int main() {
    int n;
    scanf("%d",&n);
    int A[size];
-   for(int i=0;i<n;i++) {
-     scanf("%d",&A[i]);
-   }
+   read(A,n);
    printf("%d\n",find_min(A,0,n-1));
 }
 
