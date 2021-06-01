@@ -1,14 +1,7 @@
 #include<stdio.h>
 int const size=100;
-void Merge(int A[],int p,int t,int q) {
-      int L[size], R[size];//creating temporary arrays
-      int n1=t-p+1,n2=q-t;
-      int i=0,j=0;
-      for( i=0;i<n1;i++)
-	      L[i]=A[i+p];
-       for( j=0;j<n2;j++)
-              R[j]=A[j+t+1];
-    i=0,j=0;
+void Merge(int A[],int L[],int R[],int p,int n1,int n2) {
+   int i=0,j=0;
     int k=p;
     while(i<n1 && j<n2) {
          if(L[i]<R[j]) {
@@ -40,7 +33,14 @@ void sort(int A[],int p,int q) {
   int t=(p+q)/2;
      sort(A,p,t);
      sort(A,t+1,q);
-     Merge(A,p,t,q);
+	 int L[size], R[size];//creating temporary arrays
+      int n1=t-p+1,n2=q-t;
+      int i=0,j=0;
+      for( i=0;i<n1;i++)
+	      L[i]=A[i+p];
+       for( j=0;j<n2;j++)
+              R[j]=A[j+t+1];  
+     Merge(A,L,R,p,n1,n2);
   }
   return;
 }
