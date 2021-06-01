@@ -1,7 +1,7 @@
 #include<stdio.h>
 int const size=100;
 int search_x(int A[],int p,int q,int x) {
-	if(p<q) {
+	if(p<=q) {
     int t=(p+q)/2;
     if(A[t]==x)
 	    return 1;
