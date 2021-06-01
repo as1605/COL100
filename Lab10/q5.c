@@ -1,7 +1,6 @@
 #include<stdio.h>
 int const size=100;
 int search_x(int A[],int p,int q,int x) {
-        if(p<=q) {
     int t=(p+q)/2;
     if(A[t]==x)
             return t;
@@ -11,7 +10,6 @@ int search_x(int A[],int p,int q,int x) {
       else
               return search_x(A,t+1,q,x);
     }
-  }
 }  // returns index of x in log(n) time
 
 void swap(int *a,int *b) {
